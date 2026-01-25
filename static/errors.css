@@ -1,0 +1,105 @@
+    .messages-container {
+        max-width: 600px;
+        margin: 0 auto 20px;
+    }
+    
+    .message {
+        display: flex;
+        align-items: flex-start;
+        padding: 16px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        border: 2px solid;
+        animation: slideIn 0.3s ease-out;
+    }
+    
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .message-icon {
+        margin-right: 12px;
+        font-size: 20px;
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+    
+    .message-content {
+        flex: 1;
+    }
+    
+    .message-title {
+        font-weight: 600;
+        margin-bottom: 4px;
+        font-size: 16px;
+    }
+    
+    .message-text {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .message-close {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+        padding: 4px;
+        margin-left: 8px;
+        font-size: 16px;
+    }
+    
+    .message-close:hover { opacity: 1; }
+    
+    /* Цвета сообщений */
+    .message-error {
+        background-color: #FEF2F2;
+        border-color: #FECACA;
+        color: #EF4444;
+    }
+    
+    .message-warning {
+        background-color: #FFFBEB;
+        border-color: #FDE68A;
+        color: #F59E0B;
+    }
+    
+    .message-success {
+        background-color: #ECFDF5;
+        border-color: #A7F3D0;
+        color: #10B981;
+    }
+    
+    .message-info {
+        background-color: #EFF6FF;
+        border-color: #BFDBFE;
+        color: #3B82F6;
+    }
+    
+    .errors-list {
+        list-style: none;
+        margin-top: 8px;
+    }
+    
+    .errors-list li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 6px;
+        font-size: 14px;
+    }
+    
+    .errors-list li:before {
+        content: "•";
+        position: absolute;
+        left: 8px;
+        font-size: 18px;
+    }
+    
+    /* Иконки */
+    .message-error .message-icon:before { content: "⛔"; }
+    .message-warning .message-icon:before { content: "⚠️"; }
+    .message-success .message-icon:before { content: "✅"; }
+    .message-info .message-icon:before { content: "ℹ️"; }
