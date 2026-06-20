@@ -1,4 +1,4 @@
-name: my PHP Syntax Check
+name: MY PHP Syntax Check
 
 on:
   push:
