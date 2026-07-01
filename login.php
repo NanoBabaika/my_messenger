@@ -9,6 +9,7 @@ require_once './classes/Validator.php';
 
 require_once './helpers.php';
 
+//комментарий для проверки автоматизации
  
 // Стартуем сессию
 session_start();
